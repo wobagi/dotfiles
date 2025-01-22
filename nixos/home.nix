@@ -19,7 +19,7 @@
 
     # utils
     fzf
-    julia
+    # julia
     taskwarrior
     # system tools
     # pciutils # contains lspci
@@ -39,7 +39,7 @@
       export PATH="$PATH:$HOME/bin:$HOME/.local/bin"
     '';
     shellAliases = {
-      nixos = "cd ~/.dotfiles/nixos"
+      nx = "cd ~/.df/nixos"
       vim = "nvim";
     };
   };
