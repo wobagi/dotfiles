@@ -39,7 +39,7 @@
       export PATH="$PATH:$HOME/bin:$HOME/.local/bin"
     '';
     shellAliases = {
-      nx = "cd ~/.df/nixos"
+      nx = "cd ~/.df/nixos";
       vim = "nvim";
     };
   };
