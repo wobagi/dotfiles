@@ -4,7 +4,7 @@
     power-profiles-daemon.enable = false;  # disable gnome power profiles
     xserver.enable = true;
     xserver.displayManager.gdm.enable = true;
-    xserver.displayManager.gnome.enable = true;
+    xserver.desktopManager.gnome.enable = true;
     #gvfs.enable = true;
     #gnome = {
     #  tinysparql.enable = true;
@@ -18,8 +18,8 @@
     #];
   };
   services.printing.enable = false;
-  services.logind.extraConfig = ''
-    # don't shut down when power button i short-pressed
-    HandlePowerKey = ignore
-  '';
+  #services.logind.extraConfig = ''
+  #  # don't shut down when power button i short-pressed
+  #  HandlePowerKey = ignore
+  #'';
 }
