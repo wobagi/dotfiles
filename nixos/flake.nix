@@ -25,7 +25,7 @@
     nixosConfigurations = {
       tx = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        modules = [ ./nixos/hosts/tx/default.nix ];
+        modules = [ ./hosts/tx/default.nix ];
 	specialArgs = {
 	  host = "tx";
 	  inherit self inputs username;
