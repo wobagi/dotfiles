@@ -43,7 +43,22 @@
       vim = "nvim";
     };
   };
-  
+
+
+  # programs.scientific-fhs = {
+  #   enable = true;
+  #   juliaVersions = [
+  #     {
+  #       version = "julia_18";
+  #       default = true;
+  #     }
+  #     { version = "julia_17"; }
+  #     { version = "julia_16"; }
+  #   ];
+  #   enableNVIDIA = false;
+  # };
+
+
   home.stateVersion = "24.11";
   programs.home-manager.enable = true;
 

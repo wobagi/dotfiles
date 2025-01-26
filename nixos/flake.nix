@@ -12,6 +12,8 @@
       # to avoid problems caused by different versions of nixpkgs.
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    #nvf.url = "github:notashelf/nvf";
+    #scientific-fhs.url = "github:olynch/scientific-fhs";
   };
 
   outputs = inputs@{ nixpkgs, home-manager, ... }: {
@@ -21,7 +23,8 @@
         system = "x86_64-linux";
         modules = [
           ./configuration.nix
-
+          # nvf.nixosModules.default
+	  # scientific-fhs.nixosModules.default
           # make home-manager as a module of nixos
           # so that home-manager configuration will be deployed automatically when executing `nixos-rebuild switch`
           home-manager.nixosModules.home-manager

@@ -28,6 +28,19 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
+  ##### Battery life optimisations START #####
+  powerManagement.enable = true;
+
+  # Disable Gnome's power profiles daemon
+  services.power-profiles-daemon.enable = false;
+
+  # Enable tuxedo-rs and tuxedo-drivers.
+  hardware.tuxedo-drivers.enable = true;
+  hardware.tuxedo-rs = {
+    enable = true;
+    tailor-gui.enable = true;
+  };
+
   # Set your time zone.
   time.timeZone = "Europe/Warsaw";
 
