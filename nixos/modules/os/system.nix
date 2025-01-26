@@ -30,7 +30,7 @@
     LC_TELEPHONE = "pl_PL.UTF-8";
     LC_TIME = "pl_PL.UTF-8"; 
   };
-  console.keymap = "pl2";
+  # console.keymap = "pl2";
   nixpkgs.config.allowUnfree = true;
   system.stateVersion = "24.11";
 }
