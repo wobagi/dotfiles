@@ -9,7 +9,6 @@
       options = ["NOPASSWD"];
     }];
   }];
-  }
-  security.pam.services.swaylock = { };
-  security.pam.services.hyprlock = { };
+  # security.pam.services.swaylock = { };
+  # security.pam.services.hyprlock = { };
 }
