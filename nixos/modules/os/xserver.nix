@@ -4,7 +4,7 @@
     xserver = {
       enable = true;
       xkb.layout = "pl";
-      variant = "";
+      xkb.variant = "";
     };
 
     #displayManager.autoLogin = {
