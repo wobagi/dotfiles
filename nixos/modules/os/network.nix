@@ -1,7 +1,7 @@
 { pkgs, host, ... }:
 {
   networking = {
-    hostname = "${host}";
+    hostName = "${host}";
     networkmanager.enable = true;
     nameservers = [
       "83.175.144.9"
