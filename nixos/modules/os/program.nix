@@ -1,8 +1,13 @@
-{ pkgs, lib, ... }:
+{ pkgs, username, lib, ... }:
 {
   environment.systemPackages = with pkgs; [
     devenv
   ];
+  nix.extraOptions = ''
+    trusted-users = root ${username}
+  '';
+
+
   # programs.dconf.enable = true;
   # programs.zsh.enable = true;
   #programs.gnupg.agent = {
