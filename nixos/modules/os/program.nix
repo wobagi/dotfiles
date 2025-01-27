@@ -1,5 +1,8 @@
 { pkgs, lib, ... }:
 {
+  environment.systemPackages = with pkgs; [
+    devenv
+  ];
   # programs.dconf.enable = true;
   # programs.zsh.enable = true;
   #programs.gnupg.agent = {
