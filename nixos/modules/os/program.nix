@@ -7,7 +7,7 @@
   nix.extraOptions = ''
     trusted-users = root ${username}
   '';
-
+  inputs = [ inputs.scientific-fhs.nixosModules.default ];
   programs.scientific-fhs = {
     enable = true;
     juliaVersions = [
