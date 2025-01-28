@@ -2,6 +2,7 @@
 {
   environment.systemPackages = with pkgs; [
     devenv
+    python3
   ];
   nix.extraOptions = ''
     trusted-users = root ${username}
