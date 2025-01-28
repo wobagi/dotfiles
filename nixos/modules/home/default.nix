@@ -5,5 +5,6 @@
     ./git.nix
     ./lazygit.nix
     ./nvim.nix
+    ./julia.nix
   ];
 }
