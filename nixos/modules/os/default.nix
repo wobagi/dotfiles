@@ -21,7 +21,7 @@
     # ./flatpak.nix
     ./user.nix
     # ./wayland.nix
-    # ./virtualization.nix
+    ./virtualisation.nix
     # ./configuration.nix 
   ];
 }
