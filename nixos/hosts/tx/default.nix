@@ -13,6 +13,7 @@
     acpi
     brightnessctl
     cpupower-gui
+    home-manager
     powertop
   ];
 
