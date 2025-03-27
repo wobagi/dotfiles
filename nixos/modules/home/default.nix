@@ -8,6 +8,7 @@
     ./nvim.nix
     ./obs.nix
     ./julia.nix
+    ./terminal.nix
     # ./taskwarrior3.nix
   ];
 }
