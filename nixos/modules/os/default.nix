@@ -18,6 +18,7 @@
     ./security.nix
     ./services.nix
     ./system.nix
+    ./terminal.nix
     # ./flatpak.nix
     ./user.nix
     # ./wayland.nix
