@@ -2,13 +2,17 @@
 {
   i18n.inputMethod = {
     enabled = "fcitx5";
-    fcitx5.addons = [ pkgs.fcitx5-mozc ]; # or fcitx5-anthy
+    fcitx5.addons = with pkgs; [
+      fcitx5-mozc
+      fcitx5-gtk
+      fcitx5-configtool
+    ]; # or fcitx5-anthy
   };
 
   fonts.packages = with pkgs; [
     corefonts
     noto-fonts
-    noto-fonts-cjk
+    noto-fonts-cjk-sans
     noto-fonts-emoji
     noto-fonts-extra
     nerdfonts
@@ -32,4 +36,11 @@
       "IPAPMincho"
       ];
   };
+
+  environment.variables = {
+    GTK_IM_MODULE = "fcitx";
+    QT_IM_MODULE = "fcitx";
+    XMODIFIERS = "@im=fcitx";
+  };
+
 }
