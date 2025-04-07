@@ -13,7 +13,6 @@
   #  overlays = [ inputs.nur.overlays.default ];
   #};
   environment.systemPackages = with pkgs; [
-    # home-manager
     wget
     git
   ];
