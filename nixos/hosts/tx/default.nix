@@ -20,7 +20,7 @@
     ./services.nix
     ./system.nix
     # ./flatpak.nix
-    # ./user.nix
+    ./user.nix
     # ./wayland.nix
     ./virtualisation.nix
     # ./configuration.nix 

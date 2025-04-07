@@ -13,7 +13,7 @@
     extraSpecialArgs = { inherit inputs username host; };
     users.${username} = {
       imports =
-        [ ./../home/default.nix ];
+        [ ./../common/users/${username}/default.nix ];
       home.username = "${username}";
       home.homeDirectory = "/home/${username}";
       home.stateVersion = "24.11";
