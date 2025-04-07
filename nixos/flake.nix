@@ -14,7 +14,7 @@
   outputs = { nixpkgs, self, ... }@inputs:
   let
     username = "wbaginski";
-    system = "x86_64-linux";
+    # system = "x86_64-linux";
     #pkgs = import nixpkgs {
     #  inherit system;
     #  config.allowUnfree = true;
@@ -32,5 +32,29 @@
 	};
       };
     };
+    home-manager = {
+      useUserPackages = true;
+      useGlobalPackages = true;
+      extraSpecialArgs = { inherit inputs username host; };
+      users.${username} = {
+        imports = [
+          ./home/${username}/default.nix
+        ];
+        home.username = "${username}";
+        home.homeDirectory = "/home/${username}";
+        home.stateVersion = "24.11";
+        programs.home-manager.enable = true;
+      };
+    };
+    users.users.${username} = {
+      isNormalUser = true;
+      description = "${username}";
+      extraGroups = [
+        "docker"
+        "networkmanager"
+        "wheel"
+      ];
+    };
+    nix.settings.allowed-users = [ "${username}" ];
   };
 }
