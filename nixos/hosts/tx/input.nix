@@ -42,5 +42,8 @@
     QT_IM_MODULE = "fcitx";
     XMODIFIERS = "@im=fcitx";
   };
+  environment.systemPackages = with pkgs; [
+    ibus-engines.mozc
+  ];
 
 }
