@@ -3,6 +3,7 @@
   environment.systemPackages = with pkgs; [
     devenv
     python3
+    anki-bin
   ];
   nix.extraOptions = ''
     trusted-users = root ${username}
